@@ -1,4 +1,5 @@
 /* pages/order/lists.wxss */
+@import "/pages/fonts/iconfont.wxss";
 
 .flex-wrp{
     position: relative;
