@@ -1,7 +1,6 @@
 {
   "pages":[
     "pages/orderDishes/orderDishes",
-    "pages/order/order",
     "pages/index/index",
     "pages/voice/voice",
     "pages/logs/logs"
