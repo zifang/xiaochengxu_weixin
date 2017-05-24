@@ -1,0 +1,53 @@
+<view class="flex-wrap">
+    <view class="flex-item menu-list">
+        <scroll-view scroll-y="true" style="height:100%;" class="scroll-view">
+            <view class="scroll-view-item {{menuList.dishesSortId==toView?'active':''}}" wx:key="idx" wx:for="{{dishesSortList}}" wx:for-index="idx" wx:for-item="menuList" id="{{menuList.dishesSortId}}">
+                <view bindtap="toListTitle" data-sort="{{menuList.dishesSortId}}" data-index="{{idx}}">{{menuList.dishesSortName}}</view>
+                <view class="menu-count" wx:if="{{menuList.submenuCount>0}}">{{menuList.submenuCount}}</view>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="flex-item dishes-list">
+        <scroll-view scroll-y="true" class="scroll-view" bindscroll="scroll" scroll-into-view="{toView}}" scroll-top="{{scrollTop}}" scroll-with-animation="true">
+            <view class="scroll-view-item" wx:key="idx" wx:for="{{dishesSortList}}" wx:for-index="idx" wx:for-item="dinnerList" data-sort="{{dinnerList.dishesSortId}}">
+                <view class="dinner-title">{{dinnerList.dishesSortName}}</view>
+                <scroll-view class="scroll-list" wx:key="idx" wx:for="{{dinnerList.list}}" wx:for-index="idx" wx:for-item="item">
+                <!--style="background:url({{item.imgUrl?item.imgUrl:'/images/nodish.png'}}) center center;background-size:cover;"-->
+                    <view class="item-image" >
+                        <image style="max-width:100%;width:55px;height:55px;" src="{{item.imgUrl?item.imgUrl:'/images/nodish.png'}}"></image>
+                    </view>
+                    <view class="item-box">
+                            <view class="scroll-item">
+                            {{item.dishesName}}
+                        </view>
+                        <view class="item-count">
+                            月售{{item.soldNumber}}份
+                        </view>
+                        <view class="price">
+                            ¥{{item.price}}元
+                        </view>
+                    </view>
+                    <view class="item-add">
+                        <view class="btn minus" bindtap="btnMinus" data-item="{{item}}" wx:if="{{item.count>0}}"> 
+                            <i class="iconfont icon-jianhao inner"></i>
+                        </view>
+                        <view class="btn count" wx:if="{{item.count>0}}">{{item.count}}</view>
+                        <view class="btn plus" bindtap="btnPlus" data-item="{{item}}"> 
+                            <i class="iconfont icon-jiahao"></i>
+                        </view>
+                    </view>
+                </scroll-view>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="cart-footer">
+        <view class="cart-icon-box">
+            <view class="icon-box"><i class="iconfont icon-iconfontshopcar"></i></view>
+            <view class="cart-count" wx:if="{{sumCount>0}}">{{sumCount}}</view>
+        </view>
+        <view class="cart-price">合计：{{sumPrice}}元</view>
+        <view class="next-btn">
+            <button type="primary"> 下一步 </button>
+        </view>
+    </view>
+</view>

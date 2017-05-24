@@ -1,0 +1,15 @@
+{
+  "pages":[
+    "pages/order/order",
+    "pages/index/index",
+    "pages/voice/voice",
+    "pages/logs/logs"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "百味云",
+    "navigationBarTextStyle":"black"
+  }
+}

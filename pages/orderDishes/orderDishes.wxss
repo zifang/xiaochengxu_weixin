@@ -1,0 +1,163 @@
+/* pages/order/lists.wxss */
+
+.flex-wrp{
+    position: relative;
+    height:100%;
+}
+.dishes-list{
+    position:absolute;
+    top:0;
+    left:25%;
+    right:0;
+    bottom:50px;
+}
+.menu-list{
+    position: absolute;
+    top: 0;
+    bottom:50px;
+    left:0;
+    width:25%;
+    font-size:14px;
+    text-align: center;
+}
+.menu-list .menu-count,
+.cart-count{
+    position: absolute;
+    right:0;
+    top:5px;
+    display:inline-block;
+    width:16px;
+    height:16px;
+    overflow:hidden;
+    line-height: 16px;
+    color:#fff;
+    background-color:#f86134;
+    border-radius: 50%;
+    font-size:12px;
+    text-align: center;
+}
+.menu-list .active{
+    color:#11bbb4;
+    border-left: 2px solid #11bbb4;
+    background-color:#fff;
+}
+.menu-list .scroll-view{
+    background-color:aliceblue;
+}
+.menu-list .scroll-view-item{
+    position: relative;
+    /*flex: 1;*/
+    padding: 10px 5px;
+    border-bottom:1px dotted #ddd;
+}
+.dishes-list .scroll-view{
+    height:100%;
+}
+.dishes-list .dinner-title{
+    height: 16px;
+    background-color:#f8fbfb;
+    padding:5px;
+    font-size: 14px;
+}
+.dishes-list .scroll-item{
+    text-align: left;
+    font-size: 14px;
+}
+.dishes-list .price{
+    font-size: 16px;
+    text-align: left;
+    color: orange;
+}
+.dishes-list .item-count{
+    text-align: left;
+    font-size:12px;
+    color:#999;
+}
+.scroll-list{
+    height: 55px;
+    padding:10px;
+    position: relative;
+}
+.scroll-list:after{
+    content: "";
+    left:0;
+    right:0;
+    bottom: 0;
+    display: block;
+    position: absolute;
+    border-bottom: 1px solid #ddd;
+    -webkit-transform-origin: 0 100%;
+    transform-origin:0 100%;
+    -webkit-transform:scaleY(0.5);
+    transform:scaleY(0.5);
+}
+.item-image{
+    float:left;
+    width:55px;
+    height: 55px;
+    overflow: hidden;
+    margin-right:10px;
+}
+.item-box{
+    height:75px;
+    line-height: 18px;
+}
+.item-add{
+    position: absolute;
+    right:12px;
+    bottom:0;
+    color:#a9a9a9;
+}
+.item-add .btn{
+    padding:0 4px;
+    display: inline-block;
+}
+.item-add .btn i{
+    font-size: 22px;
+}
+.item-add .plus i{
+    color:#11bbb4;
+}
+
+.cart-footer{
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index: 100;
+    height:50px;
+    border-top:1px solid #ddd;
+}
+.cart-icon-box{
+    display: inline-block;
+    width:56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #11bab3;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    text-align: center;
+}
+.cart-count{
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+}
+.icon-box i{
+    display:inline-block;
+    padding-top:2px;
+    font-size:30px;
+    color:#fff;
+}
+.cart-price{
+    padding-left: 80px;
+    padding-top:12px;
+    color:#999;
+    font-size:14px;
+}
+.next-btn{
+    position: absolute;
+    right: 5px;
+    top: 2px;
+}

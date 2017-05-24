@@ -1,0 +1,5 @@
+<view>
+    <view><text>{{text}}</text></view>
+    <button type="primary" bindtap="start">开始录音</button>
+    <button type="default" bindtap="stop">停止录音</button>
+</view>
